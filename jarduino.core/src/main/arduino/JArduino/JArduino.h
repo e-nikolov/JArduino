@@ -20,8 +20,8 @@
 #ifndef JArduino_h
 #define JArduino_h
 
-// include types & constants of Wiring core API
-#include "WConstants.h"
+// include types & constants of Arduino core API
+#include "Arduino.h"
 #undef abs
 #undef round
 
