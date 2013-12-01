@@ -5,14 +5,14 @@
     <groupId>org.sintef.jarduino</groupId>
     <artifactId>org.sintef.jarduino.core</artifactId>
     <packaging>bundle</packaging>
-    <version>0.1.7-SNAPSHOT</version>
+    <version>0.1.7a-SNAPSHOT</version>
     <name>org.sintef.jarduino.core</name>
 
     <parent>
         <artifactId>org.sintef.jarduino</artifactId>
         <groupId>org.sintef.jarduino</groupId>
         <relativePath>../pom.xml</relativePath>
-        <version>0.1.7-SNAPSHOT</version>
+        <version>0.1.7a-SNAPSHOT</version>
     </parent>
 
     <!--<dependencies>
@@ -48,7 +48,6 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>

@@ -5,21 +5,21 @@
     <groupId>org.sintef.jarduino</groupId>
     <artifactId>org.sintef.jarduino.serial</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.7-SNAPSHOT</version>
+    <version>0.1.7a-SNAPSHOT</version>
     <name>org.sintef.jarduino.serial</name>
-    
+
     <properties>
         <jarduino.version>${project.version}</jarduino.version>
     </properties>
-    
+
     <parent>
         <artifactId>org.sintef.jarduino</artifactId>
         <groupId>org.sintef.jarduino</groupId>
         <relativePath>../pom.xml</relativePath>
-        <version>0.1.7-SNAPSHOT</version>
+        <version>0.1.7a-SNAPSHOT</version>
     </parent>
 
-    
+
     <build>
         <plugins>
             <!-- Java compiler plugin -->
@@ -30,33 +30,10 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>thingml-snapshot</id>
-            <name>thingml-snapshot</name>
-            <url>http://maven.thingml.org/thingml-snapshot/</url>
-        </repository>
-        <repository>
-            <id>thingml-release</id>
-            <name>thingml-release</name>
-            <url>http://maven.thingml.org/thingml-release/</url>
-        </repository>
-        <repository>
-            <id>thirdparty</id>
-            <name>thingml-snapshot</name>
-            <url>http://maven.thingml.org/thirdparty/</url>
-        </repository>
-        <repository>
-            <id>kevoree-libs-release-local</id>
-            <url>http://maven.kevoree.org/release</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
@@ -70,5 +47,5 @@
             <version>${jarduino.version}</version>
         </dependency>
     </dependencies>
- 
+
 </project>
