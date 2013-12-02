@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>org.sintef.jarduino</groupId>
-  <artifactId>org.sintef.jarduino.serial</artifactId>
+  <artifactId>org.sintef.jarduino.gui</artifactId>
   <version>0.1.7a-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20131202.235148</timestamp>
+      <timestamp>20131202.235156</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20131202235148</lastUpdated>
+    <lastUpdated>20131202235156</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>0.1.7a-20131202.235148-1</value>
-        <updated>20131202235148</updated>
+        <value>0.1.7a-20131202.235156-1</value>
+        <updated>20131202235156</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.1.7a-20131202.235148-1</value>
-        <updated>20131202235148</updated>
+        <value>0.1.7a-20131202.235156-1</value>
+        <updated>20131202235156</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
