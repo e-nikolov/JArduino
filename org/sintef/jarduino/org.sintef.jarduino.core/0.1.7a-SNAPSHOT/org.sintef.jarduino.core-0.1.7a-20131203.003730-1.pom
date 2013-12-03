@@ -3,62 +3,24 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.sintef.jarduino</groupId>
-    <artifactId>org.sintef.jarduino</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>org.sintef.jarduino.core</artifactId>
     <version>0.1.7a-SNAPSHOT</version>
-    <name>org.sintef.jarduino</name>
+    <name>org.sintef.jarduino.core</name>
 
-    <distributionManagement>
-        <repository>
-            <id>internal.repo</id>
-            <name>Temporary Staging Repository</name>
-            <url>file://${project.build.directory}/mvn-repo</url>
-        </repository>
-    </distributionManagement>
+    <parent>
+        <artifactId>org.sintef.jarduino</artifactId>
+        <groupId>org.sintef.jarduino</groupId>
+        <relativePath>../pom.xml</relativePath>
+        <version>0.1.7a-SNAPSHOT</version>
+    </parent>
 
-    <modules>
-        <!--<module>aFileDialog</module>-->
-        <module>jarduino.core</module>
-        <module>jarduino.gui</module>
-        <module>jarduino.serial</module>
-        <module>jarduino.bluetooth</module>
-        <module>jarduino.samples</module>
-        <!--<module>jarduino.samples.android</module>-->
-        <!--<module>jarduino.samples.android.gui</module>-->
-    </modules>
-
-    <properties>
-        <jarduino.version>${project.version}</jarduino.version>
-        <!-- github server corresponds to entry in ~/.m2/settings.xml -->
-        <github.global.server>github</github.global.server>
-    </properties>
-
-    <repositories>
-
-        <repository>
-            <id>thingml-snapshot</id>
-            <name>thingml-snapshot</name>
-            <url>http://maven.thingml.org/thingml-snapshot/</url>
-        </repository>
-
-        <repository>
-            <id>thingml-release</id>
-            <name>thingml-release</name>
-            <url>http://maven.thingml.org/thingml-release/</url>
-        </repository>
-
-        <repository>
-            <id>thirdparty</id>
-            <name>thingml-snapshot</name>
-            <url>http://maven.thingml.org/thirdparty/</url>
-        </repository>
-
-        <repository>
-            <id>kevoree-libs-release-local</id>
-            <url>http://maven.kevoree.org/release</url>
-        </repository>
-
-    </repositories>
+    <!--<dependencies>
+        <dependency>
+            <groupId>org.sintef.jarduino</groupId>
+            <artifactId>org.sintef.jarduino.bluetooth</artifactId>
+            <version>${jarduino.version}</version>
+        </dependency>
+    </dependencies>-->
 
     <build>
         <plugins>
