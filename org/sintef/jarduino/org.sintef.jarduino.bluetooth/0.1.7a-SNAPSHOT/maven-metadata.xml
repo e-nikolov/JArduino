@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>org.sintef.jarduino</groupId>
-  <artifactId>org.sintef.jarduino.gui</artifactId>
+  <artifactId>org.sintef.jarduino.bluetooth</artifactId>
   <version>0.1.7a-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20131203.000001</timestamp>
+      <timestamp>20131203.000032</timestamp>
       <buildNumber>2</buildNumber>
     </snapshot>
-    <lastUpdated>20131203000001</lastUpdated>
+    <lastUpdated>20131203000032</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>0.1.7a-20131203.000001-2</value>
-        <updated>20131203000001</updated>
+        <value>0.1.7a-20131203.000032-2</value>
+        <updated>20131203000032</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.1.7a-20131203.000001-2</value>
-        <updated>20131203000001</updated>
+        <value>0.1.7a-20131203.000032-2</value>
+        <updated>20131203000032</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
