@@ -3,14 +3,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.sintef.jarduino</groupId>
-    <artifactId>org.sintef.jarduino.serial</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>org.sintef.jarduino.gui</artifactId>
     <version>0.1.7a-SNAPSHOT</version>
-    <name>org.sintef.jarduino.serial</name>
-
-    <properties>
-        <jarduino.version>${project.version}</jarduino.version>
-    </properties>
+    <name>org.sintef.jarduino.gui</name>
 
     <parent>
         <artifactId>org.sintef.jarduino</artifactId>
@@ -18,7 +13,6 @@
         <relativePath>../pom.xml</relativePath>
         <version>0.1.7a-SNAPSHOT</version>
     </parent>
-
 
     <build>
         <plugins>
@@ -67,6 +61,10 @@
             <artifactId>org.sintef.jarduino.core</artifactId>
             <version>${jarduino.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.sintef.jarduino</groupId>
+            <artifactId>org.sintef.jarduino.serial</artifactId>
+            <version>${jarduino.version}</version>
+        </dependency>
     </dependencies>
-
 </project>
