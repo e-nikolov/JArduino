@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.sintef.jarduino</groupId>
-  <artifactId>org.sintef.jarduino.gui</artifactId>
+  <artifactId>org.sintef.jarduino.bluetooth</artifactId>
   <versioning>
     <versions>
       <version>0.1.7a-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20131203001850</lastUpdated>
+    <lastUpdated>20131203001859</lastUpdated>
   </versioning>
 </metadata>
