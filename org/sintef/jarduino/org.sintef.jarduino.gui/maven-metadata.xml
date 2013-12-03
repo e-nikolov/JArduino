@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.sintef.jarduino</groupId>
-  <artifactId>org.sintef.jarduino.serial</artifactId>
+  <artifactId>org.sintef.jarduino.gui</artifactId>
   <versioning>
     <versions>
       <version>0.1.7a-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20131203000648</lastUpdated>
+    <lastUpdated>20131203000655</lastUpdated>
   </versioning>
 </metadata>
