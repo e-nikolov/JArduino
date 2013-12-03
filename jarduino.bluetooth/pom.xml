@@ -5,18 +5,18 @@
     <groupId>org.sintef.jarduino</groupId>
     <artifactId>org.sintef.jarduino.bluetooth</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.7-SNAPSHOT</version>
+    <version>0.1.7a-SNAPSHOT</version>
     <name>org.sintef.jarduino.bluetooth</name>
-    
+
     <properties>
         <jarduino.version>${project.version}</jarduino.version>
     </properties>
-    
+
     <parent>
         <artifactId>org.sintef.jarduino</artifactId>
         <groupId>org.sintef.jarduino</groupId>
         <relativePath>../pom.xml</relativePath>
-        <version>0.1.7-SNAPSHOT</version>
+        <version>0.1.7a-SNAPSHOT</version>
     </parent>
 
     <repositories>
@@ -75,5 +75,5 @@
             </plugin>
         </plugins>
     </build>
- 
+
 </project>

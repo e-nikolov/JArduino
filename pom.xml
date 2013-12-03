@@ -9,19 +9,11 @@
     <name>org.sintef.jarduino</name>
 
     <distributionManagement>
-
         <repository>
-            <id>thingml-release</id>
-            <name>thingml-release</name>
-            <url>http://maven.thingml.org/archiva/repository/thingml-release/</url>
+            <id>internal.repo</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
         </repository>
-
-        <snapshotRepository>
-            <id>thingml-snapshot</id>
-            <name>thingml-snapshot</name>
-            <url>http://maven.thingml.org/archiva/repository/thingml-snapshot/</url>
-        </snapshotRepository>
-
     </distributionManagement>
 
     <modules>
@@ -37,6 +29,8 @@
 
     <properties>
         <jarduino.version>${project.version}</jarduino.version>
+        <!-- github server corresponds to entry in ~/.m2/settings.xml -->
+        <github.global.server>github</github.global.server>
     </properties>
 
     <repositories>
@@ -66,4 +60,40 @@
 
     </repositories>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.9</version>
+                <configuration>
+                    <merge>true</merge>
+                    <message>Maven artifacts for ${project.version}</message>
+                    <!-- git commit message -->
+                    <noJekyll>true</noJekyll>
+                    <!-- disable webpage processing -->
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+                    <!-- matches distribution management repository url above -->
+                    <branch>refs/heads/mvn-repo</branch>
+                    <!-- remote branch name -->
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryName>JArduino</repositoryName>
+                    <!-- github repo name -->
+                    <repositoryOwner>e-nikolov</repositoryOwner>
+                    <!-- github username  -->
+                </configuration>
+                <executions>
+                    <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
