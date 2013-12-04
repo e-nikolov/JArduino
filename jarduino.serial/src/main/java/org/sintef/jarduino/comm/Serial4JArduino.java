@@ -18,50 +18,42 @@
 package org.sintef.jarduino.comm;
 
 import gnu.io.*;
-import org.sintef.jarduino.observer.JArduinoClientObserver;
-import org.sintef.jarduino.observer.JArduinoObserver;
-import org.sintef.jarduino.observer.JArduinoSubject;
-import org.sintef.jarduino.sim.InteractiveJArduinoDataControllerClient;
+import org.sintef.jarduino.observer.*;
+import org.sintef.jarduino.sim.*;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
 public class Serial4JArduino implements JArduinoClientObserver, JArduinoSubject {
 
 	static {
 		System.out.println("Loading3 RxTx");
-//		try {
-//			String osName = System.getProperty("os.name");
-//			String osProc = System.getProperty("os.arch");
-//			if (osName.equals("Mac OS X")) {
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Mac_OS_X/librxtxSerial.jnilib"), "librxtxSerial.jnilib");
-//			}
-//			if (osName.equals("Win32")) {
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Windows/win32/rxtxSerial.dll"), "rxtxSerial.dll");
-//			}
-//			if (osName.equals("Win64") || osName.equals("Windows 7")) {
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Windows/win64/rxtxSerial.dll"), "rxtxSerial.dll");
-//			}
-//			if (osName.equals("Linux") && osProc.equals("x86-64")) {
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/x86_64-unknown-linux-gnu/librxtxSerial.so"), "librxtxSerial.so");
-//			}
-//			if (osName.equals("Linux") && osProc.equals("ia64")) {
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/ia64-unknown-linux-gnu/librxtxSerial.so"), "librxtxSerial.so");
-//			}
-//			if (osName.equals("Linux") && osProc.equals("x86")) {
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/i686-unknown-linux-gnu/librxtxParallel.so"), "librxtxParallel.so");
-//				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/i686-unknown-linux-gnu/librxtxSerial.so"), "librxtxSerial.so");
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		try {
+			String osName = System.getProperty("os.name");
+			String osProc = System.getProperty("os.arch");
+			if (osName.equals("Mac OS X")) {
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Mac_OS_X/librxtxSerial.jnilib"), "librxtxSerial.jnilib");
+			}
+			if (osName.equals("Win32")) {
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Windows/win32/rxtxSerial.dll"), "rxtxSerial.dll");
+			}
+			if (osName.equals("Win64") || osName.equals("Windows 7")) {
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Windows/win64/rxtxSerial.dll"), "rxtxSerial.dll");
+			}
+			if (osName.equals("Linux") && osProc.equals("x86-64")) {
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/x86_64-unknown-linux-gnu/librxtxSerial.so"), "librxtxSerial.so");
+			}
+			if (osName.equals("Linux") && osProc.equals("ia64")) {
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/ia64-unknown-linux-gnu/librxtxSerial.so"), "librxtxSerial.so");
+			}
+			if (osName.equals("Linux") && osProc.equals("x86")) {
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/i686-unknown-linux-gnu/librxtxParallel.so"), "librxtxParallel.so");
+				NativeLibUtil.copyFile(Serial4JArduino.class.getClassLoader().getResourceAsStream("nativelib/Linux/i686-unknown-linux-gnu/librxtxSerial.so"), "librxtxSerial.so");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static final byte START_BYTE = 0x12;
